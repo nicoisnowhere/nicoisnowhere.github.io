@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+  <!--- 
+  
+  Hello! This is the code writer here, and this text is to help you in editing my code. Feel free to pop a question over my @encodedworlds tumblr.
+  
+  Rules (if you don't follow them, my free codes will eventually be removed and you will be called out & unable to access my future codes or code updates):
+  
+  ∙ don't remove my credit! Feel free to move it to fit the aesthetic of your page, but keep it somewhere visible so people can find me.
+  ∙ please don't republish my code or close copies of it anywhere!
+  ∙ feel free to post/use heavily edited versions of this code or codes with excerpts of this, but you must reference me in the code somewhere, please!
+  
+  Creds:
+  ∙ created with lots of coding help from w3schools.com
+  ∙ tooltips by tippy.js
+  ∙ icons by font-awesome
+  ∙ fonts via googlefonts
+  
+  NOTES:
+  ∙ areas are marked by name + css/js/html depending on what they are
+  ∙ if you want me to add extra coding help notes, go ahead and ask!
+  ∙ to format your text, look up basic html. w3schools.com is a good resource!
+  ∙ to add a hover-title on your links and things, in the first <a > section, add  > title="your text" < and write whatever you want!
+  ∙ to find handy colors for your theme, I recommend coolors.co!
+  
+  --->
+  
+  <title>Navigation</title>
+  
+    <link rel="shortcut icon" href="{Favicon}" style="border-radius:50%">
+  
+    <meta name="pinterest" content="nopin" /> <!--- this blocks pinterest from adding a "pin it" button to your images, including your background image--go ahead and remove it if you want people to be able to pin from here! ---->
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans"> <!-- edit the font family here by choosing any google font! some of my faves are: Mont/serrat, Cali/bri, Op/en Sans, Pop/pins, without the slashes. You can edit easily by using search and replace!
+    You might also have to edit the font size depending on your font, which you can do by searching > font-size < and changing the px number
+    Please try to make sure your font is readable, and accessible, if possible.
+    All google fonts can be viewed here: https://fonts.google.com/
+    --->
+    
+    <script src="https://kit.fontawesome.com/3e69271a12.js"></script>
+
+    
+<style>
+  
+tumblr_controls, .tmblr-iframe { /* this blocks the auto tumblr tools. delete it if you want them to appear! */
+    display:none!important;
+    margin-top:0px;
+    padding:0px;
+}
+
+
+/* tooltip.css   via atomiks tippy */
+
+.tippy-box[data-theme~='custom'] {
+    text-align: center;
+    font-family: inherit;
+    border-radius: 3px;
+    padding: 1px;
+    margin: 0px;
+    bottom:0px;
+    font-size: 13.5px;
+}
+
+/* scrollbar.css */
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: #D8C4F2;
+    opacity: .70px;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 5px;
+    border-radius:5px;
+    background-color: #9963B5;
+} 
+ 
+::selection { /* this prevents selection on the page. You can can instead add a color and background-color here if you wish!  */
+    /* -webkit-user-select: none;  /* Chrome all / Safari all */
+    /*-moz-user-select: none;     /* Firefox all */
+    /*-ms-user-select: none;      /* IE 10+ */
+    /*user-select: none;          /* Likely future */
+    background-color:lavender;
+    color:#4C335E;
+}
+  
+body {
+    font-family: 'Open Sans', sans-serif; /* google font */
+    font-size:16px;
+    cursor:default;
+    margin:auto;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    top:0px;
+    background-image: url(https://i.imgur.com/KI57EZ4.jpg); /* your background image url goes between the brackets */
+    background-size:cover;
+    background-attachment:fixed;
+    transition:.5s;
+}
+
+a {
+    text-decoration:none;
+    color:inherit;
+}
+
+/* in-content link styles */
+
+.tabcontent a {
+    cursor:auto;
+    color:#9963B5;
+    text-decoration: none;
+    transition:.5s;
+    box-shadow:inset 0 0 0 #DFC5EC;
+}
+
+.tabcontent a:visited { /* changes the color of the link text after you've already visited it */
+    color:deepgray;
+}
+
+.tabcontent a:hover { /* changes the link style when you hover your mouse over */
+    color:;
+    cursor:pointer;
+    box-shadow:inset 0px -6.5px 0px #DFC5EC;
+}
+
+.avatar { /* avatar.css */
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+}
+
+.maincontainer {
+    font-family:'Open Sans', sans-serif;
+    position:center;
+    width:44.5%;
+    padding:10px;
+    margin:auto;
+    margin-top:20px;
+    background-color: white;
+    opacity:98%;
+    border-radius:7px; /* this rounds the edges of your main container */
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.linkcontainer {
+    font-family:'Open Sans', sans-serif;
+    position:center;
+    padding:10px;
+    margin:auto;
+    margin-top:20px;
+    opacity:98%;
+    margin-bottom:20px;
+    text-align:center;
+    max-width:500px;
+    padding-top:5px;
+    background-color:transparent;
+    font-weight:normal;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ and Edge */
+    user-select: none; /* Standard syntax */
+}
+  
+  /* page tabs.css/buttons.css */
+.tab {
+    text-align: center;
+    overflow: hidden;
+}
+
+.tab button {
+    font-family:'Open Sans';
+    background-color:#DFC5EC;
+    float: center;
+    font-weight:bold;
+    border:none;
+    text-align: center;
+    margin: 0px;
+    margin-right: 5px;
+    margin-top: 5px;
+    top:0px;
+    bottom:0px;
+    right:0px;
+    left:0px;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 20px;
+    transition: 0.3s;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ and Edge */
+    user-select: none; /* Standard syntax */
+}
+
+.tab button:hover {
+    background-color: plum; /* tab button when you hover */
+}
+
+
+.tab button:active { /* the button of your current tab/page  */
+    background-color: lavender;
+}
+
+.tabcontent {
+    text-align:left;
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+.tabcontent h1,h2,h3,h4,h5,h6 {
+    text-align:center;
+}
+
+/* fact.css */
+
+.fact {  /* these are the outlined text with facts about you! */
+    background-color: lavender;
+    padding:8px;
+    border-radius:10px;
+    margin:5px;
+    margin-bottom:8px;
+}
+
+/* collapsible.css */
+.collapsible { 
+    font-family:'Open Sans';
+    text-align:left;
+    background-color: lavender;
+    cursor: pointer;
+    border: none;
+    border-radius:10px;
+    margin:0px;
+    outline: none;
+    font-size: 16px; /* fs.desk */
+    transition: .5s;
+    font-weight:normal;
+    color:black;
+    width:100%;
+    padding:8px 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: plum;
+}
+
+.content { /* this changes the style of the content within the collapsible! */
+    padding: 0 13px;
+    margin-left:5px;
+    border-radius:15px;
+    background-color: #e3ceee;
+    max-height:0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    padding:4.5px 0px;
+    background-color:transparent;
+}
+
+/* links.css */
+
+.links { /* these are the links at the bottom of the page! */
+    text-align:center;
+    overflow:hidden;
+    font-family:'Open Sans';
+    background-color: lavender;
+    color:#4C335E;
+    float: center;
+    font-weight:bold;
+    border:none;
+    text-align: center;
+    margin: 0px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom:7px;
+    top:0px;
+    bottom:0px;
+    right:0px;
+    left:0px;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 20px;
+    transition: 0.5s;
+}
+
+
+.links:hover {
+    background-color: plum;
+    box-shadow: 1px 1px 5px; /* this adds a shadow when you hover over the links, you can delete it if you want, or add it to any other buttons! */ 
+    color:#4C335E;
+}
+
+#credit {  /* this is the credit for my coding! you may alter but please don't remove */
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 99;
+    border: none;
+    border-radius:50%;
+    width:40px;
+    height:40px;
+    outline: none;
+    background-color: lavender;
+    color:#4C335E;
+    cursor: pointer;
+    padding: 5px;
+    font-family:'Open Sans';
+    font-weight:none;
+    font-size: 15px;
+    transition:.5s;
+    opacity:75%;
+}
+
+#credit:hover {
+    background-color: plum;
+    opacity:100%;
+}
+
+#credit a {
+    text-decoration:none;
+    color:darkslategray;
+}
+#credit a:active {
+    color:black;
+}
+
+/* scrolltop.css */
+
+#scrollTop { /* this is the scroll-to-top button! */
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    border-radius:50%;
+    width:40px;
+    height:40px;
+    outline: none;
+    background-color: lavender;
+    color: #9963B5;
+    cursor: pointer;
+    padding: 10px;
+    font-family:'Open Sans';
+    font-weight:bold;
+    font-size: 17px;
+    transition:.5s;
+}
+
+#scrollTop:hover {
+    background-color: plum;
+    color:#4C335E;
+}
+  
+@media only screen and (max-width: 900px) { /* mobile tablet/ipad - this changes how the design looks on your ipad or tablet! */
+    .maincontainer {
+        width:70%;
+    }
+}
+  
+@media only screen and (max-width: 600px) { /* mobile phone - this changes how the design looks on your phone! */
+    button {
+        font-size:17px;
+    }
+    .maincontainer {
+        width: 90%;
+        margin-top:0px;
+        font-size:18px;
+        top:0px;
+    }
+    
+    #credit {
+        position:relative;
+        left:45%;
+        opacity:100%;
+        margin-top:15px;
+    }
+    
+    #scrollTop {
+        display:none;
+        visibility:hidden;
+    }
+  
+    body {
+        font-size:18px;
+    }
+    
+    .collapsible {
+        font-size:20px;
+    }
+  
+    .avatar {
+        height:200px;
+        width:200px;
+  }
+}
+  
+</style>
+</head>
+<body>
+  
+  <button onclick="topFunction()" id="scrollTop" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+
+  
+  <div class="maincontainer">
+    
+    <!-- tab buttons.html -->
+    
+    <div class="tab-bar">
+    <div class="tab">
+      <button class="tablink" onclick="openPage('PageOne', this, 'lavender')" id="defaultOpen">About</button>
+      <button class="tablink" onclick="openPage('PageTwo', this, 'lavender')">Fun Facts</button>
+      <button class="tablink" onclick="openPage('PageThree', this, 'lavender')">FAQ</button>
+      
+      <!-- to add another tab (you can have as many as you want!) first copy and paste this:
+      <button class="tablink" onclick="openPage('PageFour', this, 'lavender')">TITLE OF YOUR PAGE</button>
+      Each time you add a tab, edit the 'PageFour' to another number: 'PageFive' 'PageSix' etc. Have fun!
+      -->
+    </div>
+      </div>
+    
+    
+    <div id="PageOne" class="tabcontent"> <!-- p1.html -->
+    <div class="fact"><b>Name</b>&nbsp Lav Nav</div> <!-- the > &nbsp < stands for "non-break space" and it just adds an extra space where you want one! -->
+  <div class="fact"><b>Fun fact</b>&nbsp Every species has come into existence coincident both in space and time with a pre-existing closely allied species. - Sarawak Law</div> <!-- you can list as many pronouns as you want! -->
+  <!---  to add another fact, just copy and paste!
+  <div class="fact"><b>Fact Title</b>&nbsp fact content</div>
+  -->
+  <p>Hi and welcome! I coded this to function as an About Me page with tabs.
+  <ul>
+      <li>Here's a lovely list for you to talk about yourself.</p>
+      <li>The page is fully responsive to different screen sizes, so a laptop and a phone are both safe!</p>
+      <li>In the html, add another "li" every time you want to add a list item.</p>
+      <li>Or delete the list altogether.</p>
+  </ul>
+  <p>Here's <a href="/" target="_blank" title="link hover title">what a link looks like!</a></p> <!-- url goes between the quotes "" by href. the  target="_blank"  makes the link open in another tab! -->
+  
+  
+</div> <!-- end of page one -->
+    
+<div id="PageTwo" class="tabcontent"> <!-- p2.html --->
+  <h3>Fun Facts</h3>
+  <p>You can change the title and use it for anything you want!</p>
+  <p>Here are some fun facts:</p>
+  <ul>
+      <li>Binomial nomenclature involves a two-term name for classifying a species.</p>
+      <li>These names are commonly referred to as binomial names, scientific names, or Latin names.</p>
+      <li>The scientific name for us is <i>Homo sapiens</i>.</p>
+      <li>Scientific names are written with the first word capitalized and the second in lower case.</p>
+      <li>If you can, make sure to write it in Italics (<i>Homo sapiens</i> instead of Homo sapiens).</p> 
+      <li>Scientific names can be shortened with initials, but spell out the last word for clarity: <i>H. sapiens.</i></p>
+  </ul>
+</div> <!-- end of page two -->
+
+    <!-- Page Three Content -->
+    
+<div id="PageThree" class="tabcontent"> <!--- p3.html --->
+  <h3>FAQ</h3>
+  <p>You can put any text you want here!</p>
+  
+  <button type="button" class="collapsible">Is this where a question title goes?</button>
+<div class="content">
+    <p>Yep! And here's the answer.</p>
+  <!--- end of collabsible -->
+</div>
+
+    <button type="button" class="collapsible">What inspired you to make this page?</button>
+<div class="content">
+    <p>I couldn't find the kind of page I wanted, so I made it myself instead so I could use it and share it.</p>
+  <!--- end of collabsible -->
+</div>
+
+<!-- to add another, just copy and paste!-->
+
+<p>And here's a Tumblr ask form below, in case you want it here!</p>
+
+<iframe id="ask_form" style="background-color: transparent; overflow: hidden" src="http://www.tumblr.com/ask_form/{name}.tumblr.com "frameborder="0" scrolling="no" width="100%" height="200"> </iframe>
+
+<!-- end --->
+</div> <!-- end tab content -->
+    
+  </div>
+  
+  <div class="linkcontainer">
+     <button class="links"><a href="/">home</a></button>
+    <button class="links"  title="more hover title"><a href="https://beyondencodedworlds.tumblr.com" target="_blank">more coding</a></button>
+    <button class="links"><a href="/" target="_blank">a very very very long link title</a></button>
+    <button class="links"><a href="/random" target="_blank">random</a></button>
+    
+    <!--- you can add however many links you want, just make sure to place them above this div! And for links on your own blog, you don't have to type out the full url, you can just do / plus whatever the url is! --->
+  </div>
+
+
+<a href="https://encodedworlds.tumblr.com" target="_blank"><button id="credit" title="theme"><i class="fas fa-code"></i></button></a>
+
+<!--- javascript begin --->
+
+<!-- tooltip Development -->
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+<!-- tooltip Production -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+  
+<!-- tooltip.js by atomiks -->
+
+<script>
+tippy('[title]', {
+        theme: 'custom',
+        arrow: false,
+        followCursor: false,
+        delay: 50,
+        placement: 'left', /* changes position of tooltip! */
+        zIndex: 9999999999,
+        maxWidth: 250,
+    
+        content(reference) {
+          const title = reference.getAttribute('title');
+          reference.removeAttribute('title');
+          return title;
+        },
+    });</script>
+  
+  <script>
+
+  // scroll to top.css //
+  
+  //Get the button:
+mybutton = document.getElementById("scrollTop");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+  
+  // collapsable.js //
+  
+  var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+  
+  // page buttons.js //
+  
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+  </script>
+  
+</body>
+</html>
